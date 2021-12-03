@@ -1,7 +1,7 @@
 # call-plugins-parent
 Serviço "pai", que deve publicar mensagens na fila e realizar chamadas a outra API para validar a seguinte POC:
 
-- Qual forma de implementação é mais veloz?
+- Qual forma de implementação é mais veloz (tanto para implementar quanto em mensagens por segundo)?
 - Qual forma de implementação garante menos falhas?
 
 Este projeto é responsável por receber uma chamada HTTP, que informa a quantidade de mensagens que:
