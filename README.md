@@ -31,6 +31,8 @@ serviço rest template: https://github.com/Zodh/rest-template-plugin
 
 # conclusão
 
+A implementação do serviço de RabbitMQ é muito mais veloz, pois não necessita de uma modelagem OpenAPI e nem muita coisa além de um @RabbitListener.
+
 Para esta POC, não considero negociável perder informação entre serviços internos. A pequena redução de performance (ainda assim atendendo 427.3 chamadas por segundo em um AMD FX8300 com 8GB de RAM) me parece melhor se comparado à perda de requisições.
 
 OBS: esta poc foi realizada para saber qual o melhor caminho para conectar dois serviços internos. Tanto rabbit mq quanto Rest Template possuem vantagens e desvantagens, não indicando aqui que um se sobressai a outro, mas sim, validar os tópicos listados anteriormente.
