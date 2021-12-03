@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Call Plugins Validator
+  description: A simple API to compare rest template and rabbitMQ messages between the main service and a plugin service.
+
+servers:
+  - url: http://localhost:8080
+
+paths:
+  /results:
+    post:
+      tags:
+        - Compare Services
+      description: Lets a user post a new artist
+      parameters:
+        - $ref: '#/components/parameters/numberOfMessages'
+      responses:
+        200:
+          $ref: '#/components/responses/200Ok'
+
+components:
+  schemas:
+    Results:
+      type: object
+      description: Result of calling both plugins.
+      properties:
+        numberOfCalls: 
+          type: integer
+          description: Number of calls requested by the user.
+          example: 400
+        restTemplateSuccessfulCalls:
+          type: integer
+          description: Number of successful plugin calls that address http call implementation.
+          example: 378
+        rabbitMqSuccessfulCalls:
+          type: integer
+          description: Number of successful plug-in calls that address the implementation of queues.
+          example: 400
+
+  #  ----- Parameters  ------
+  parameters:
+    numberOfMessages:
+      name: messagesQuantity
+      in: header
+      description: Quantity of messages sent from the main service to the plugins.
+      schema:
+        type: integer
+      required: true
+      
+  # ----- Responses -----
+
+  responses:
+    200Ok:
+      description: Successful request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Results'
+  #  ---- /Added lines  ----------------------------------------

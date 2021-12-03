@@ -1,4 +1,4 @@
-package br.com.felipec.CallPluginsParent;
+package br.com.felipec.callpluginsparent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class CallPluginsParentApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CallPluginsParentApplication.class, args);
 	}
-
 }
