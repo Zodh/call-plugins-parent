@@ -18,6 +18,6 @@ Resultado da POC:
 
 serviço rabbit mq (**vencedor**): https://github.com/Zodh/rabbit-mq-plugin
 
-serviço rabbit mq: https://github.com/Zodh/rabbit-mq-plugin
+serviço rest template: https://github.com/Zodh/rest-template-plugin
 
 OBS: esta poc foi realizada para saber qual o melhor caminho para conectar dois serviços internos. Tanto rabbit mq quanto Rest Template possuem vantagens e desvantagens, não indicando aqui que um se sobressai a outro, mas sim, validar os tópicos listados anteriormente.
